@@ -1,0 +1,11 @@
+go 1.20
+
+use (
+	.
+	./databases
+	./router
+	./dto/requestDTO
+	./dto/responseDTO
+	./entity
+	./service
+)
