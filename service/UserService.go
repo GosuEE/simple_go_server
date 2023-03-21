@@ -2,8 +2,21 @@ package service
 
 import (
 	"databases"
+	"requestDTO"
 	"responseDTO"
 )
+
+func DeleteUser(u requestDTO.UserRequestDTO){
+	databases.DeleteUser(&u)
+}
+
+func UpdateUser(u requestDTO.UserRequestDTO){
+	databases.UpdateUser(&u)
+}
+
+func AddUser(u requestDTO.UserRequestDTO) {
+	databases.InsertUser(&u)
+}
 
 func GetUser() []responseDTO.UserResponseDTO{
 	users := databases.GetAllUsers()

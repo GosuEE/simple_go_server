@@ -15,7 +15,7 @@ func Router(){
 
     corHandler := cors.New(cors.Options{
         AllowedOrigins:   []string{"http://localhost:3000"},
-		AllowedMethods:   []string{"*"},
+		AllowedMethods:   []string{http.MethodGet, http.MethodPatch, http.MethodPost, http.MethodDelete},
 		AllowedHeaders:   []string{"*"},
 		AllowCredentials: true,
 		MaxAge:           0,
